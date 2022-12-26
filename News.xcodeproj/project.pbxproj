@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		501EB7E8295A45A4005CCF7C /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501EB7E7295A45A4005CCF7C /* SFSafariViewWrapper.swift */; };
 		50EC415D2946744B00788222 /* NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC415C2946744B00788222 /* NewsApp.swift */; };
 		50EC415F2946744B00788222 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC415E2946744B00788222 /* ContentView.swift */; };
 		50EC41612946744C00788222 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50EC41602946744C00788222 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		501EB7E7295A45A4005CCF7C /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
 		50EC41592946744B00788222 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EC415C2946744B00788222 /* NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApp.swift; sourceTree = "<group>"; };
 		50EC415E2946744B00788222 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 		50204E0D2947644B00A28641 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				501EB7E7295A45A4005CCF7C /* SFSafariViewWrapper.swift */,
 				50EC416E294674F000788222 /* ProfileView.swift */,
 				50EC417229468BC300788222 /* SavedNewsView.swift */,
 				50EC417029468BAF00788222 /* SettingsView.swift */,
@@ -178,6 +181,7 @@
 				50EC416F294674F000788222 /* ProfileView.swift in Sources */,
 				50EC417129468BAF00788222 /* SettingsView.swift in Sources */,
 				50EC415F2946744B00788222 /* ContentView.swift in Sources */,
+				501EB7E8295A45A4005CCF7C /* SFSafariViewWrapper.swift in Sources */,
 				50EC415D2946744B00788222 /* NewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"News/Preview Content\"";
+				DEVELOPMENT_TEAM = A7YFZ7Q6XC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -335,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"News/Preview Content\"";
+				DEVELOPMENT_TEAM = A7YFZ7Q6XC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
