@@ -15,6 +15,7 @@ struct NewsComponentView: View {
     var url: String
     
     @State private var showSafari: Bool = false
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         HStack() {
@@ -44,11 +45,13 @@ struct NewsComponentView: View {
                 Text(title)
                     .font(.headline).bold()
                     .frame(width: 180, height: 30, alignment: .topLeading)
+                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                 Text(description)
                     .frame(width: 180, height: 75, alignment: .topLeading)
                     .font(.subheadline)
                     .opacity(0.5)
                     .padding(-10)
+                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
             }
         }
         .foregroundColor(.black)
@@ -56,7 +59,7 @@ struct NewsComponentView: View {
             showSafari.toggle()
         }
         .fullScreenCover(isPresented: $showSafari, content: {
-            SFSafariViewWrapper(url: URL(string: url)!)
+            SFSafariViewWrapper(url: URL(string: url)!).ignoresSafeArea()
         })
     }
     
