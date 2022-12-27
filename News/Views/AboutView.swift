@@ -14,8 +14,6 @@ struct AboutView: View {
                 .font(.title)
             Text("Created by Yevhenii Kapitonov")
                 .opacity(0.3)
-            Text("v0.1")
-                .opacity(0.3)
         }
     }
 }

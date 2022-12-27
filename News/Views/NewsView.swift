@@ -57,9 +57,12 @@ struct NewsView: View {
     
     var body: some View {
         ScrollView() {
-            ForEach(viewModel.news, id: \.self) { article in
-                NewsComponentView(title: article.title, description: article.description, urlToImage: article.urlToImage, url: article.url)
-                    .navigationTitle("News")
+            ForEach(viewModel.news, id: \.self) {
+                article in
+                if article.urlToImage != nil {
+                    NewsComponentView(title: article.title, description: article.description, urlToImage: article.urlToImage, url: article.url)
+                        .navigationTitle("News")
+                }
             }
         }
         .onAppear {

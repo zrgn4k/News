@@ -22,10 +22,13 @@ struct NewsComponentView: View {
             AsyncImage(url: URL(string: urlToImage ?? "")) { phase in
                 switch phase{
                 case .empty:
-                    Image("placeholderImg")
-                        .resizable()
+                    Rectangle()
+                        .font(.system(.title))
                         .frame(width: 180, height: 110, alignment: .leading)
+                        .background(colorScheme == .dark ? Color.gray : Color.black)
+                        .opacity(0.3)
                         .cornerRadius(10)
+ 
                     
                 case .success(let image):
                     image
