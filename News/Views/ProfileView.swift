@@ -20,7 +20,7 @@ struct ProfileView: View {
                     Text("User")
                         .font(.title)
                         .frame(width: 190, alignment: .leading)
-                    Button("Log in", action: {})
+                    Button("Create User", action: {})
                         .frame(width: 185, alignment: .leading)
                 }
                 .padding()

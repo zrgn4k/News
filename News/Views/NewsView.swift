@@ -60,8 +60,11 @@ struct NewsView: View {
                     NewsComponentView(title: article.title, description: article.description, urlToImage: article.urlToImage, url: article.url)
                         .swipeActions() {
                             Button {
-                                savedNews.savedArticles.append(Article(title: article.title, description: article.description, url: article.url, urlToImage: article.urlToImage))
-                                print(savedNews.savedArticles)
+                                if savedNews.savedArticles.contains(Article(title: article.title, description: article.description, url: article.url, urlToImage: article.urlToImage)) {
+                                    print("Article is already there!")
+                                } else {
+                                    savedNews.savedArticles.append(Article(title: article.title, description: article.description, url: article.url, urlToImage: article.urlToImage))
+                                }
                             } label: {
                                 Label("Save", systemImage: "bookmark")
                             }
