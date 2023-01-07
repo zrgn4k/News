@@ -28,7 +28,7 @@ struct NewsComponentView: View {
                         .background(colorScheme == .dark ? Color.gray : Color.black)
                         .opacity(0.3)
                         .cornerRadius(10)
- 
+                    
                     
                 case .success(let image):
                     image
@@ -65,10 +65,11 @@ struct NewsComponentView: View {
             SFSafariViewWrapper(url: URL(string: url)!).ignoresSafeArea()
         })
     }
-    
-    struct NewsComponentView_Previews: PreviewProvider {
-        static var previews: some View {
-            NewsComponentView(title: "Placeholder", description: "Placeholder", urlToImage: "", url: "")
-        }
+}
+
+struct NewsComponentView_Previews: PreviewProvider {
+    static var previews: some View {
+        NewsComponentView(title: "Placeholder", description: "Placeholder", urlToImage: "", url: "")
     }
 }
+

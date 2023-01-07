@@ -13,33 +13,30 @@ struct JSONAnswer: Codable {
 }
 
 struct Article: Codable, Hashable {
-    let source: Source
     let title: String
     let description: String
     let url: String
     let urlToImage: String?
-    let publishedAt: String
-    let content: String
 }
 
-struct Source: Codable, Hashable {
-    let id: String?
-    let name: String
+class SavedNews: ObservableObject {
+    @Published var savedArticles: [Article]
+    
+    init() {
+        savedArticles = []
+    }
 }
 
-class ViewModel:ObservableObject {
+class ViewModel: ObservableObject {
     
     @Published var news: [Article] = []
     
     func fetch() {
-        guard let url = URL(string: "https://newsapi.org/v2/everything?q=apple&from=2022-12-22&to=2022-12-22&sortBy=popularity&apiKey=843d1595afe843cdabfa28676e0f3d21") else {
-            return
-        }
+        guard let url = URL(string: "https://newsapi.org/v2/everything?q=apple&from=2022-12-22&to=2022-12-22&sortBy=popularity&apiKey=843d1595afe843cdabfa28676e0f3d21") else { return }
+        
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data, error == nil else {
-                return
-            }
-             
+            guard let data = data, error == nil else { return }
+            
             do {
                 let answer = try JSONDecoder().decode(JSONAnswer.self, from: data)
                 self.news = answer.articles
@@ -54,25 +51,35 @@ class ViewModel:ObservableObject {
 
 struct NewsView: View {
     @StateObject var viewModel = ViewModel()
+    @EnvironmentObject var savedNews: SavedNews
     
     var body: some View {
-        ScrollView() {
-            ForEach(viewModel.news, id: \.self) {
-                article in
+        List {
+            ForEach(viewModel.news, id: \.self) {article in
                 if article.urlToImage != nil {
                     NewsComponentView(title: article.title, description: article.description, urlToImage: article.urlToImage, url: article.url)
-                        .navigationTitle("News")
+                        .swipeActions() {
+                            Button {
+                                savedNews.savedArticles.append(Article(title: article.title, description: article.description, url: article.url, urlToImage: article.urlToImage))
+                                print(savedNews.savedArticles)
+                            } label: {
+                                Label("Save", systemImage: "bookmark")
+                            }
+                            .tint(.yellow)
+                        }
                 }
             }
+            .environmentObject(savedNews)
         }
+        .listStyle(.plain)
         .onAppear {
             viewModel.fetch()
         }
     }
-}
-
-struct NewsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsView()
+    
+    struct NewsView_Previews: PreviewProvider {
+        static var previews: some View {
+            NewsView()
+        }
     }
 }
