@@ -61,13 +61,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		50204E0E2947646100A28641 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		50EC41502946744B00788222 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +80,6 @@
 		50EC415B2946744B00788222 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				50204E0E2947646100A28641 /* API */,
 				50204E0D2947644B00A28641 /* Views */,
 				50EC415C2946744B00788222 /* NewsApp.swift */,
 				50EC41602946744C00788222 /* Assets.xcassets */,

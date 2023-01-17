@@ -19,13 +19,6 @@ struct Article: Codable, Hashable {
     let urlToImage: String?
 }
 
-class SavedNews: ObservableObject {
-    @Published var savedArticles: [Article]
-    
-    init() {
-        savedArticles = []
-    }
-}
 
 class ViewModel: ObservableObject {
     
