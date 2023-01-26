@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		501EB7E8295A45A4005CCF7C /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501EB7E7295A45A4005CCF7C /* SFSafariViewWrapper.swift */; };
+		507CCBB72976CBA60052770E /* UserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507CCBB62976CBA60052770E /* UserDataView.swift */; };
 		50EC415D2946744B00788222 /* NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC415C2946744B00788222 /* NewsApp.swift */; };
 		50EC415F2946744B00788222 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC415E2946744B00788222 /* ContentView.swift */; };
 		50EC41612946744C00788222 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50EC41602946744C00788222 /* Assets.xcassets */; };
@@ -15,13 +16,13 @@
 		50EC416B294674D900788222 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC416A294674D900788222 /* NewsView.swift */; };
 		50EC416D294674E700788222 /* NewsComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC416C294674E700788222 /* NewsComponentView.swift */; };
 		50EC416F294674F000788222 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC416E294674F000788222 /* ProfileView.swift */; };
-		50EC417129468BAF00788222 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC417029468BAF00788222 /* SettingsView.swift */; };
 		50EC417329468BC300788222 /* SavedNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC417229468BC300788222 /* SavedNewsView.swift */; };
 		50EC417529468CD800788222 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC417429468CD800788222 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		501EB7E7295A45A4005CCF7C /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
+		507CCBB62976CBA60052770E /* UserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataView.swift; sourceTree = "<group>"; };
 		50EC41592946744B00788222 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EC415C2946744B00788222 /* NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApp.swift; sourceTree = "<group>"; };
 		50EC415E2946744B00788222 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		50EC416A294674D900788222 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		50EC416C294674E700788222 /* NewsComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsComponentView.swift; sourceTree = "<group>"; };
 		50EC416E294674F000788222 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		50EC417029468BAF00788222 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		50EC417229468BC300788222 /* SavedNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedNewsView.swift; sourceTree = "<group>"; };
 		50EC417429468CD800788222 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,11 +52,11 @@
 				501EB7E7295A45A4005CCF7C /* SFSafariViewWrapper.swift */,
 				50EC416E294674F000788222 /* ProfileView.swift */,
 				50EC417229468BC300788222 /* SavedNewsView.swift */,
-				50EC417029468BAF00788222 /* SettingsView.swift */,
 				50EC417429468CD800788222 /* AboutView.swift */,
 				50EC416C294674E700788222 /* NewsComponentView.swift */,
 				50EC416A294674D900788222 /* NewsView.swift */,
 				50EC415E2946744B00788222 /* ContentView.swift */,
+				507CCBB62976CBA60052770E /* UserDataView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,11 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				50EC417529468CD800788222 /* AboutView.swift in Sources */,
+				507CCBB72976CBA60052770E /* UserDataView.swift in Sources */,
 				50EC416B294674D900788222 /* NewsView.swift in Sources */,
 				50EC416D294674E700788222 /* NewsComponentView.swift in Sources */,
 				50EC417329468BC300788222 /* SavedNewsView.swift in Sources */,
 				50EC416F294674F000788222 /* ProfileView.swift in Sources */,
-				50EC417129468BAF00788222 /* SettingsView.swift in Sources */,
 				50EC415F2946744B00788222 /* ContentView.swift in Sources */,
 				501EB7E8295A45A4005CCF7C /* SFSafariViewWrapper.swift in Sources */,
 				50EC415D2946744B00788222 /* NewsApp.swift in Sources */,

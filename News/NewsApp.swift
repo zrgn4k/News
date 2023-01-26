@@ -10,11 +10,15 @@ import SwiftUI
 
 class SavedNews: ObservableObject {
     @Published var savedArticles: [Article] = []
+    @Published var name: String = "User"
     
     init() {
+        if let receivedName = UserDefaults.standard.string(forKey: "name") {
+            name = receivedName
+            print("i received name")
+        }
         if let data = UserDefaults.standard.data(forKey: "savedArray"),
             let articles = try? JSONDecoder().decode([Article].self, from: data) {
-                print(articles)
                 savedArticles = articles
                 return
             }
@@ -24,9 +28,9 @@ class SavedNews: ObservableObject {
     func save() {
         if let encoded = try? JSONEncoder().encode(savedArticles) {
             UserDefaults.standard.set(encoded, forKey: "savedArray")
-            print("i saved data!!!")
-            print(encoded)
         }
+        UserDefaults.standard.set(name, forKey: "name")
+        print("i saved name")
     }
 }
 

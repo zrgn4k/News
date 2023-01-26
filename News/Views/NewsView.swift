@@ -19,7 +19,6 @@ struct Article: Codable, Hashable {
     let urlToImage: String?
 }
 
-
 class ViewModel: ObservableObject {
     
     @Published var news: [Article] = []
