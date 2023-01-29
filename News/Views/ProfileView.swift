@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ProfileView: View {
-    //@State var name: String = "User"
     @EnvironmentObject var savedNews: SavedNews
     var body: some View {
         VStack() {
@@ -45,9 +44,3 @@ struct ProfileView: View {
         }
     }
 }
-
-//struct ProfileView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProfileView()
-//    }
-//}

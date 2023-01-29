@@ -24,7 +24,7 @@ class ViewModel: ObservableObject {
     @Published var news: [Article] = []
     
     func fetch() {
-        guard let url = URL(string: "https://newsapi.org/v2/everything?q=apple&from=2022-12-22&to=2022-12-22&sortBy=popularity&apiKey=843d1595afe843cdabfa28676e0f3d21") else { return }
+        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=843d1595afe843cdabfa28676e0f3d21") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else { return }

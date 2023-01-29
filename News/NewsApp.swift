@@ -15,7 +15,6 @@ class SavedNews: ObservableObject {
     init() {
         if let receivedName = UserDefaults.standard.string(forKey: "name") {
             name = receivedName
-            print("i received name")
         }
         if let data = UserDefaults.standard.data(forKey: "savedArray"),
             let articles = try? JSONDecoder().decode([Article].self, from: data) {
@@ -30,7 +29,6 @@ class SavedNews: ObservableObject {
             UserDefaults.standard.set(encoded, forKey: "savedArray")
         }
         UserDefaults.standard.set(name, forKey: "name")
-        print("i saved name")
     }
 }
 
