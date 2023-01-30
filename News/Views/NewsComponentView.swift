@@ -37,7 +37,12 @@ struct NewsComponentView: View {
                         .cornerRadius(10)
                     
                 case .failure:
-                    Image(systemName: "photo")
+                    Rectangle()
+                        .font(.system(.title))
+                        .frame(width: 180, height: 110, alignment: .leading)
+                        .background(colorScheme == .dark ? Color.gray : Color.black)
+                        .opacity(0.3)
+                        .cornerRadius(10)
                     
                 @unknown default:
                     fatalError()
